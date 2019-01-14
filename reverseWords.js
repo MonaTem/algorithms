@@ -5,7 +5,7 @@ const reverseWords = (string) => {
   reverseArray.forEach(word => {
      let letterArray = word.split('');
      let reverseWord = [];
-     for (i = word.length-1; i >= 0; i--) {
+     for (let i = word.length-1; i >= 0; i--) {
         reverseWord.push(letterArray[i]);
      }
   backwardsWord = reverseWord.join('');
