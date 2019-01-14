@@ -1,4 +1,5 @@
 const caesarCipher = (str, num) => {
+  num = num % 26;
   lowerCaseStr = str.toLowerCase();
   let characterArray = lowerCaseStr.split('');
   let validCharacters = 'abcdefghijklmnopqrstuvwxyz'.split('');
@@ -28,7 +29,7 @@ const caesarCipher = (str, num) => {
 
   return caesarStr;
 };
-// caesarCipher('Zoo Keeper', 2);
+caesarCipher('Zoo Keeper', 2);
 // caesarCipher('buzzy');
-caesarCipher('butterflies are very free', 2);
+// caesarCipher('butterflies are very free', 2);
 // caesarCipher('a bear is brown in the woods', -3);
