@@ -4,12 +4,11 @@ const reverseWords = (string) => {
   reverseWordString = '';
   reverseArray.forEach(word => {
      let letterArray = word.split('');
-     let reverseWord = [];
+     let reverseWord = '';
      for (let i = word.length-1; i >= 0; i--) {
-        reverseWord.push(letterArray[i]);
+        reverseWord += word[i];
      }
-  backwardsWord = reverseWord.join('');
-  reverseWordString = reverseWordString +  backwardsWord + ' ';
+  reverseWordString = reverseWordString +  reverseWord + ' ';
   });
   console.log(reverseWordString);
 
