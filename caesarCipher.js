@@ -9,6 +9,8 @@ const caesarCipher = (str, num) => {
       let newIdx = (validCharacters.indexOf(char) + num);
       if (newIdx >= validCharacters.length) {
         newIdx = newIdx - validCharacters.length;
+      }  else if (newIdx < 0) {
+         newIdx = newIdx + validCharacters.length;
       }
       caesarArray.push(validCharacters[newIdx]);
     } else if (char === ' ') caesarArray.push(char);
@@ -16,7 +18,7 @@ const caesarCipher = (str, num) => {
   });
   return caesarStr;
 };
-// caesarCipher('Zoo Keeper', -3);
+// caesarCipher('Zoo Keeper', 5);
 // caesarCipher('buzzy');
 // caesarCipher('butterflies are very free');
-caesarCipher('Zoo Keeper', 5);
+caesarCipher('a bear is brown in the woods', -3);
