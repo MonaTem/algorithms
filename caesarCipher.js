@@ -16,6 +16,7 @@ const caesarCipher = (str, num) => {
   });
   return caesarStr;
 };
-caesarCipher('Zoo Keeper', -3);
+// caesarCipher('Zoo Keeper', -3);
 // caesarCipher('buzzy');
 // caesarCipher('butterflies are very free');
+caesarCipher('Zoo Keeper', 5);
