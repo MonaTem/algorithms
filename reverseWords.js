@@ -14,4 +14,5 @@ const reverseWords = (string) => {
 
 };
 
-reverseWords('this is a string of words');
+// reverseWords('this is a string of words');
+reverseWords('Coding Javascript');
