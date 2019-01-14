@@ -29,7 +29,9 @@ const caesarCipher = (str, num) => {
 
   return caesarStr;
 };
-caesarCipher('Zoo Keeper', 2);
+// caesarCipher('Zoo Keeper', 2);
 // caesarCipher('buzzy');
 // caesarCipher('butterflies are very free', 2);
 // caesarCipher('a bear is brown in the woods', -3);
+// caesarCipher('Big Car', -16);
+caesarCipher('JavaScript', -900);
