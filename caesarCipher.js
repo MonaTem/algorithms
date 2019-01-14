@@ -1,24 +1,34 @@
 const caesarCipher = (str, num) => {
-  str = str.toLowerCase();
-  let characterArray = str.split('');
+  lowerCaseStr = str.toLowerCase();
+  let characterArray = lowerCaseStr.split('');
   let validCharacters = 'abcdefghijklmnopqrstuvwxyz'.split('');
-  let caesarArray = [];
   let caesarStr = '';
-  characterArray.forEach(char => {
-    if (validCharacters.indexOf(char) > -1) {
-      let newIdx = (validCharacters.indexOf(char) + num);
-      if (newIdx >= validCharacters.length) {
-        newIdx = newIdx - validCharacters.length;
-      }  else if (newIdx < 0) {
-         newIdx = newIdx + validCharacters.length;
+  let len = validCharacters.length;
+  for (let i = 0; i < characterArray.length; i++) {
+    let char = characterArray[i];
+    if (char === ' ') {
+      caesarStr = caesarStr + char;
+      continue;
+    }
+    let newIdx = validCharacters.indexOf(char);
+    if (newIdx > -1) {
+      newIdx = (validCharacters.indexOf(char) + num);
+      if (newIdx >= len) {
+        newIdx = newIdx - len;
       }
-      caesarArray.push(validCharacters[newIdx]);
-    } else if (char === ' ') caesarArray.push(char);
-  caesarStr = caesarArray.join('') ;
-  });
+    }
+    if (newIdx < 0) {
+      newIdx = newIdx + len;
+    }
+    let newChar = validCharacters[newIdx];
+    if (str[i] === str[i].toUpperCase()) {
+       caesarStr = caesarStr + newChar.toUpperCase();
+    } else caesarStr = caesarStr + newChar;
+  }
+
   return caesarStr;
 };
-// caesarCipher('Zoo Keeper', 5);
+// caesarCipher('Zoo Keeper', 2);
 // caesarCipher('buzzy');
-// caesarCipher('butterflies are very free');
-caesarCipher('a bear is brown in the woods', -3);
+caesarCipher('butterflies are very free', 2);
+// caesarCipher('a bear is brown in the woods', -3);
