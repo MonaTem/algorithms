@@ -6,7 +6,7 @@ const caesarCipher = (str, num) => {
   let caesarStr = '';
   characterArray.forEach(char => {
     if (validCharacters.indexOf(char) > -1) {
-      let newIdx = (validCharacters.indexOf(char) + 2);
+      let newIdx = (validCharacters.indexOf(char) + num);
       if (newIdx >= validCharacters.length) {
         newIdx = newIdx - validCharacters.length;
       }
@@ -16,6 +16,6 @@ const caesarCipher = (str, num) => {
   });
   return caesarStr;
 };
-// caesarCipher('Zoo Keeper', 2);
+caesarCipher('Zoo Keeper', -3);
 // caesarCipher('buzzy');
-caesarCipher('butterflies are very free');
+// caesarCipher('butterflies are very free');
