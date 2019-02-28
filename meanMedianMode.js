@@ -16,7 +16,7 @@ const getMedian = (array) => {
   if (modulo === 0 ) {
     medIdx = array.length / 2 - 1 ;
     median = (array[medIdx] + array[medIdx + 1]) / 2;
-  } else median = array.length + 1 / 2;
+   } else median = array[(array.length + 1) / 2];
 return median;
 }
 
