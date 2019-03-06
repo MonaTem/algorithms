@@ -16,4 +16,4 @@ const twoSum = (numArray, sum) => {
 
 var numArray = [1, 6, 4, 5, 3, 3];
 var sum = 7;
-twoSum(numArray, sum);
+twoSum(numArray, sum); 
