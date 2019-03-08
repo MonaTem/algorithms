@@ -1,11 +1,6 @@
 const factorial = (num) => {
-
   if (num === 1) {
      return num;
-  } else { var factorial_nbr = num * num - 1;
-           num--;
-           factorial(num);
-         }
-     return factorial_nbr
+  } else return num * factorial(num - 1);
 }
-factorial(4);
+factorial(5);
