@@ -3,6 +3,7 @@ const sieveOfEratosthenes = (num) => {
   // in an array
 
   var numArray = [];
+  var result = [];
   numArray[0] = false;
   numArray[1] = false;
   for (let i = 2; i <= num; i++) {
@@ -16,6 +17,9 @@ const sieveOfEratosthenes = (num) => {
       }
     }
   }
-return numArray;
+for (let i = 0; i <= num; i++) {
+  if (numArray[i]) result.push(i);
+}
+return result;
 }
 sieveOfEratosthenes(20);
