@@ -1,25 +1,24 @@
-const sieveOfEratosthenes = (num) => {
-  // return all prime numbers up to num
-  // in an array
-
-  var numArray = [];
-  var result = [];
-  numArray[0] = false;
-  numArray[1] = false;
-  for (let i = 2; i <= num; i++) {
-    numArray[i] = true;
+unction sieveOfEratosthenes(n) {
+  var primes = [];
+  for (var i = 0; i <= n; i++) {
+    primes[i] = true;
   }
 
-  for (let i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
-    for (let j = 4; j <= num; j++) {
-      if (j % i === 0) {
-        numArray[j] = false;
-      }
+  primes[0] = false;
+  primes[1] = false;
+
+  for (var i = 2; i <= Math.sqrt(n); i++) {
+    for (j = 2; i * j <= n; j++) {
+      primes[i * j] = false;
     }
   }
-for (let i = 0; i <= num; i++) {
-  if (numArray[i]) result.push(i);
+
+  var result = [];
+  for (var i = 0; i < primes.length; i++) {
+    if (primes[i]) result.push(i);
+  }
+
+  return result;
 }
-return result;
-}
-sieveOfEratosthenes(20);
+
+sieveOfEratosthenes(200);
