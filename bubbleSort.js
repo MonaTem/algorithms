@@ -12,4 +12,5 @@ const bubbleSort = (array) => {
 return array;
 }
 // bubbleSort([5, 3, 8, 2, 1, 4]);
-bubbleSort([20, 20, 31, 56, 1, 12, 12]);
+// bubbleSort([20, 20, 31, 56, 1, 12, 12]);
+bubbleSort([3, -9, -12, -1, 8]);
