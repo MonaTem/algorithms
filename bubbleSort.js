@@ -1,7 +1,7 @@
 const bubbleSort = (array) => {
   // return array sorted with bubble sort
-  for (i = 0; i < array.length; i++) {
-    for (j = 0; j < array.length; j++) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
       if (array[j] > array[j+1]) {
         let temp = array[j];
         array[j] = array[j+1];
